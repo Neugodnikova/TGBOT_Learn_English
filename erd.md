@@ -1,12 +1,12 @@
 # Entity-Relationship Diagram (ERD)
 Диаграмма взаимосвязей сущностей (ERD) для базы данных Telegram-бота.
 
-![ERD Diagram](ERD.PNG)
+![ERD Diagram](ERD.png)
 
 ```plantuml
 @startuml
 entity "users" {
-    * id : Integer <<PK>>
+    * id : Bigint <<PK>> 
     --
     name : String
 }
@@ -28,6 +28,7 @@ entity "userwords" {
 
 users ||--o{ userwords : "has"
 @enduml
+
 
 Объяснение:
 users: Таблица для хранения данных пользователей.
